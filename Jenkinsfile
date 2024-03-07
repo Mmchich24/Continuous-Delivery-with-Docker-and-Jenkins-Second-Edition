@@ -28,7 +28,7 @@ pipeline {
     stage('Run CodeCoverage test on main branch') {
       when {
           // Only deploy on the main branch
-          branch 'main'
+          branch 'master'
       }
       steps { 
         echo 'runing codecoverage'
@@ -42,7 +42,7 @@ pipeline {
     
    stage('Run other tests on non-main branches') {
             when {
-                not { branch 'main' }
+                not { branch 'master' }
             }
             steps {
                 echo 'Running other tests on non-main branch'
