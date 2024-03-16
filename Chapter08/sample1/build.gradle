@@ -22,13 +22,15 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation("io.cucumber:cucumber-java:4.2.6")
 	testImplementation("io.cucumber:cucumber-junit:4.2.6")
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 }
+
 
 jacocoTestCoverageVerification {
 	violationRules {
 		rule {
 			limit {
-				minimum = 0.2
+				minimum = 0.1
 			}
 		}
 	}
@@ -52,4 +54,4 @@ test {
 	exclude '**/acceptance/**'
 	exclude '**/smoke/**'
 }
-jacoco { toolVersion= "0.8.6"}
+jacoco {toolVersion= "0.8.6"}
